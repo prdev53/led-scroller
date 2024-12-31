@@ -47,7 +47,7 @@ func sendText() {
 }
 
 func main() {
-    if len(os.Args) == 3 && os.Args[1] == "test" {
+    if len(os.Args) == 3 && os.Args[1] == "show" {
         initialize()
         input := os.Args[2]
         message = dict.StringToText(input)
@@ -58,6 +58,7 @@ func main() {
         fmt.Println("led help - Brings up this menu")
         fmt.Println("led serve - Starts the scrolling and listens for changes")
         fmt.Println("led send <text> - Sends the text to the LED scroller server")
+        fmt.Println("led show <text> - Starts the scrolling without listening for changes")
     } else if len(os.Args) == 2 && os.Args[1] == "serve" {
         initialize()
 
